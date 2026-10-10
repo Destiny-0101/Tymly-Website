@@ -36,7 +36,7 @@ export function ProductPage() {
             <article className="feature-card">
               <div className="icon-tile"><Check size={22} /></div>
               <h3>Desktop operation</h3>
-              <p>Tymly is currently described as a desktop timer. A mobile app or download destination has not been verified.</p>
+              <p>A desktop destination is listed on the Availability page. No mobile app or app-store listing has been confirmed.</p>
             </article>
           </div>
           <div className="callout">

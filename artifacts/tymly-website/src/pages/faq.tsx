@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { ActionLink, PageHero } from '../components/site/marketing-elements';
 import { SiteLayout } from '../components/site/site-layout';
+import { siteConfig } from '../site-config';
 
 const questions = [
   {
@@ -25,13 +26,15 @@ const questions = [
   },
   {
     question: 'Is there a mobile app or a download link?',
-    answer:
-      'No verified mobile app or public download link is available to share at this time. See the availability page for an honest update.',
+    answer: siteConfig.downloadUrl
+      ? 'A desktop destination is linked on the availability page. No mobile app or app-store listing is presented as available.'
+      : 'No verified mobile app or public download link is available to share at this time. See the availability page for an honest update.',
   },
   {
     question: 'Does the contact form send my message?',
-    answer:
-      'Only if a verified contact email is configured: then the form opens your email app, and you send the message yourself. Otherwise, it validates your entries but sends or stores nothing.',
+    answer: siteConfig.contactEmail
+      ? `The form opens your email app with a prepared message addressed to ${siteConfig.contactEmail}. Review and send it there; the website does not send or store the message.`
+      : 'The form validates your entries but does not send or store a message until a verified contact recipient is configured.',
   },
 ];
 

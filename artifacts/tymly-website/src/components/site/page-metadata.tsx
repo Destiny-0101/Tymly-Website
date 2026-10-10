@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { siteConfig } from '../../site-config';
 
 export const pageMetadata = {
   '/': {
@@ -29,7 +30,9 @@ export const pageMetadata = {
   '/download': {
     title: 'Tymly download — availability and access',
     description:
-      'Check the current availability of Tymly and access details. No mobile app or unverified destination is presented as available.',
+      siteConfig.downloadUrl
+        ? 'Open the configured Tymly desktop destination for current access details. No mobile app or app-store listing is presented as available.'
+        : 'Check the current availability of Tymly and access details. No mobile app or unverified destination is presented as available.',
   },
   '/faq': {
     title: 'Tymly FAQ — answers about the event timer',

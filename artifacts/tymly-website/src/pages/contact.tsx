@@ -62,7 +62,11 @@ export function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title="A note, a question, an idea?"
-        intro="We’d like to hear what live-event coordination looks like from where you stand. Contact details will appear here once a verified destination is available."
+        intro={
+          siteConfig.contactEmail
+            ? `We’d like to hear what live-event coordination looks like from where you stand. Email ${siteConfig.contactEmail} directly or use the message form below.`
+            : 'We’d like to hear what live-event coordination looks like from where you stand. Contact details will appear here once a verified destination is available.'
+        }
       />
       <section className="section section-tint">
         <div className="section-inner contact-layout">
@@ -77,6 +81,11 @@ export function ContactPage() {
                 ? 'A verified recipient is configured. After validation, the form opens your email application with a prepared message. It is not sent or stored by this website.'
                 : 'There is no verified contact inbox or message backend configured yet. Your message will not be sent or stored by this website today.'}
             </div>
+            {siteConfig.contactEmail && (
+              <p className="contact-address">
+                <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+              </p>
+            )}
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit} noValidate>

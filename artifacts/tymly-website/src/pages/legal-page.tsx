@@ -59,15 +59,16 @@ function PrivacySections() {
       </p>
       <h2>Links and future product</h2>
       <p>
-        Pages may eventually link to external services. Their privacy practices would be governed
-        by their own notices. This marketing website draft does not describe data handling inside
-        the Tymly desktop product; that needs a separate, verified explanation if applicable.
+        The download page links to a separate Tymly destination. Review that destination’s privacy
+        practices before interacting with it. This marketing website draft does not describe data
+        handling inside the Tymly desktop product; that needs a separate, verified explanation if
+        applicable.
       </p>
       <h2>Questions and updates</h2>
       <p>
-        A verified privacy contact has not been supplied. Once an appropriate contact path and
-        actual website practices are confirmed, this draft should be updated with that
-        information and an effective date.
+        A general contact address is listed on the Contact page. Confirm that it is monitored for
+        privacy requests before treating it as a privacy contact. This draft should also be
+        updated with verified website practices and an effective date.
       </p>
     </>
   );
@@ -96,7 +97,7 @@ function TermsSections() {
       <p>{contactDescription}</p>
       <h2>External links and review</h2>
       <p>
-        If links to other websites are added, those services operate under their own terms. This
+        The Download page links to a separate destination, which may have its own terms. This
         starter copy requires review to confirm the website operator, applicable jurisdiction,
         effective date, hosting, and any other required provisions before publication.
       </p>
