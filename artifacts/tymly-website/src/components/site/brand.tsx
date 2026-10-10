@@ -8,8 +8,18 @@ export function Brand({ footer = false }: { footer?: boolean }) {
       aria-label="Tymly home"
       data-testid={footer ? 'link-footer-brand' : 'link-brand'}
     >
-      <span className="brand-mark" aria-hidden="true" />
-      tymly
+      {footer ? (
+        <>
+          <span className="brand-mark" aria-hidden="true" />
+          tymly
+        </>
+      ) : (
+        <img
+          className="brand-logo"
+          src={`${import.meta.env.BASE_URL}tymly-logo-header.png`}
+          alt=""
+        />
+      )}
     </Link>
   );
 }
