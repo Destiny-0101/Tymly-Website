@@ -1,0 +1,1 @@
+- [Tymly product boundaries](tymly-product-boundaries.md) — keep today’s desktop timer distinct from the broader coordination vision and omit unverified proof claims.

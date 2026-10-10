@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Tymly Website"
+description = "A responsive, multi-page marketing website for Tymly, an event coordination tool that currently provides desktop countdown timing for live events."
+version = "1.0.0"
+id = "artifacts/tymly-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22860
+
+[services.development]
+run = "pnpm --filter @workspace/tymly-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tymly-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/tymly-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22860"
+BASE_PATH = "/"
