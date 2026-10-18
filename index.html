@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tymly — Your helpful Chronoguide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TYMly NAVBAR -->
+<header class="tymly-navbar">
+  <nav class="tymly-navbar__container" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a class="tymly-navbar__logo" href="#home" aria-label="Tymly home">
+      <img 
+        class="tymly-navbar__logo-image"
+        src="assets/TY-04.png"
+        alt="Tymly">
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      class="tymly-navbar__toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="tymly-navbar-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation links -->
+    <div class="tymly-navbar__menu" id="tymly-navbar-menu">
+
+      <div class="tymly-navbar__links">
+        <a class="tymly-navbar__link" href="#home">Home</a>
+        <a class="tymly-navbar__link" href="#problem">The Problem</a>
+        <a class="tymly-navbar__link" href="#product">Product</a>
+        <a class="tymly-navbar__link" href="#about">About</a>
+        <a class="tymly-navbar__link" href="#vision">Our Vision</a>
+      </div>
+
+      <a class="tymly-navbar__cta" href="#product">
+        Explore Tymly
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </nav>
+</header>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    
+  <main>
+
+<!-- TYMLY HERO SECTION -->
+<section class="tymly-hero" id="home">
+  <div class="tymly-hero__container">
+
+    <!-- Left side: Main message -->
+    <div class="tymly-hero__content">
+
+      <span class="tymly-hero__eyebrow">
+        TIME MANAGEMENT FOR LIVE EVENTS
+      </span>
+
+      <h1 class="tymly-hero__title">
+        Every moment matters.
+        <span>Make every second count.</span>
+      </h1>
+
+      <p class="tymly-hero__description">
+        Tymly is building practical tools to help speakers
+        and event teams manage time, coordinate better,
+        and keep live events moving smoothly.
+      </p>
+
+      <!-- Main actions -->
+      <div class="tymly-hero__actions">
+        <a href="#product" class="tymly-hero__button">
+          Explore Tymly
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="#vision" class="tymly-hero__secondary-link">
+          Discover our vision
+        </a>
+      </div>
+
+      <!-- Small supporting statement -->
+      <p class="tymly-hero__note">
+        <span class="tymly-hero__status-dot"></span>
+        Built around the real demands of live events.
+      </p>
+
+    </div>
+
+    <!-- Right side: Timer preview -->
+    <div class="tymly-hero__visual">
+
+      <div class="tymly-hero__glow"></div>
+
+      <div
+        class="tymly-hero__timer-card"
+        role="img"
+        aria-label="Illustrative preview of a Tymly event timer showing 30 minutes remaining"
+      >
+
+        <div class="tymly-hero__timer-header">
+          <div class="tymly-hero__brand">
+            <img 
+              class="tymly-navbar__logo-image"
+              src="assets/TY-04.png"
+              alt="Tymly">
+          </div>
+
+          <span class="tymly-hero__preview-label">
+            TIMER PREVIEW
+          </span>
+        </div>
+
+        <div class="tymly-hero__timer-body">
+          <p class="tymly-hero__timer-caption">
+            TIME REMAINING
+          </p>
+
+          <div class="tymly-hero__time">
+            30<span>:00</span>
+          </div>
+
+          <div class="tymly-hero__progress-track">
+            <div class="tymly-hero__progress-fill"></div>
+          </div>
+
+          <div class="tymly-hero__timer-footer">
+            <span>Session timer</span>
+            <span>30-minute example</span>
+          </div>
+        </div>
+
+        <div class="tymly-hero__timer-bottom">
+          <span class="tymly-hero__timer-indicator"></span>
+          <span>Illustrative interface</span>
+        </div>
+
+      </div>
+
+      <!-- Floating detail -->
+      <div class="tymly-hero__floating-card">
+        <span class="tymly-hero__floating-icon">◷</span>
+
+        <div>
+          <strong>Stay on time</strong>
+          <p>Keep every moment in view.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+ 
+<!-- Section 2: The Problem -->
+<section class="tymly-problem" id="problem">
+  <div class="tymly-problem__container">
+
+    <div class="tymly-problem__intro">
+      <span class="tymly-problem__eyebrow">
+        THE CHALLENGE
+      </span>
+
+      <h2>
+        Great events need more than
+        <span>good planning.</span>
+      </h2>
+
+      <p>
+        Behind every successful live event is a team working
+        to keep everything on track. But when timing,
+        communication, and transitions fall out of sync,
+        the whole programme can feel the pressure.
+      </p>
+    </div>
+
+    <div class="tymly-problem__grid">
+
+      <!-- Problem 1 -->
+      <article class="tymly-problem__card">
+        <div class="tymly-problem__icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+        </div>
+
+        <h3>When time slips away</h3>
+
+        <p>
+          Speakers run over their allocated time, sessions
+          stretch longer than planned, and the rest of the
+          programme gets pushed behind schedule.
+        </p>
+      </article>
+
+      <!-- Problem 2 -->
+      <article class="tymly-problem__card">
+        <div class="tymly-problem__icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M8 10h8"/>
+            <path d="M8 14h5"/>
+            <path d="M20 11.5a7.5 7.5 0 0 1-11.4 6.4L4 19l1.1-4A7.5 7.5 0 1 1 20 11.5Z"/>
+          </svg>
+        </div>
+
+        <h3>When teams lose sync</h3>
+
+        <p>
+          Speakers, organizers, and media teams need to stay
+          aligned. Without clear coordination, important
+          updates can be missed when they matter most.
+        </p>
+      </article>
+
+      <!-- Problem 3 -->
+      <article class="tymly-problem__card">
+        <div class="tymly-problem__icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2"/>
+            <path d="M16 3v4M8 3v4M3 10h18"/>
+            <path d="m9 15 2 2 4-4"/>
+          </svg>
+        </div>
+
+        <h3>When transitions get messy</h3>
+
+        <p>
+          Unexpected delays and programme changes can make
+          it harder to move smoothly from one speaker,
+          session, or activity to the next.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="tymly-problem__closing">
+      <p>
+        <strong>The goal isn't just to run an event.</strong>
+        It's to help everyone involved stay on the same page.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TYMly PRODUCT SECTION -->
+<section class="tymly-product" id="product">
+  <div class="tymly-product__container">
+
+    <!-- Section introduction -->
+    <div class="tymly-product__intro">
+      <span class="tymly-product__eyebrow">
+        WHAT WE'RE BUILDING
+      </span>
+
+      <h2 class="tymly-product__title">
+        Meet the timer built for
+        <span>moments that matter.</span>
+      </h2>
+
+      <p class="tymly-product__description">
+        We're starting with a dedicated desktop timer to help
+        speakers and event teams stay aware of time during
+        sermons, presentations, conferences, and other live events.
+      </p>
+    </div>
+
+    <!-- Product showcase -->
+    <div class="tymly-product__showcase">
+
+      <!-- Visual timer preview -->
+      <div class="tymly-product__preview">
+
+        <div class="tymly-product__window">
+
+          <div class="tymly-product__window-header">
+            <div class="tymly-product__window-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <span class="tymly-product__window-label">
+              TYMLY TIMER — PREVIEW
+            </span>
+          </div>
+
+          <div class="tymly-product__screen">
+
+            <div class="tymly-product__screen-brand">
+              <img 
+              class="tymly-navbar__logo-image"
+              src="assets/TY-04.png"
+              alt="Tymly">
+            </div>
+
+            <p class="tymly-product__screen-caption">
+              SESSION COUNTDOWN
+            </p>
+
+            <div class="tymly-product__countdown">
+              30:00
+            </div>
+
+            <p class="tymly-product__screen-note">
+              Example session duration
+            </p>
+
+            <div class="tymly-product__presets">
+              <span>30 MIN</span>
+              <span>45 MIN</span>
+              <span>60 MIN</span>
+              <span>90 MIN</span>
+            </div>
+
+            <div class="tymly-product__demo-controls">
+              <span class="tymly-product__demo-button">
+                ▶ &nbsp; Start
+              </span>
+
+              <span class="tymly-product__demo-button">
+                ↺ &nbsp; Reset
+              </span>
+            </div>
+
+            <p class="tymly-product__disclaimer">
+              Illustrative preview — controls are not interactive.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="tymly-product__preview-tag">
+          <span></span>
+          A focused tool for live events
+        </div>
+
+      </div>
+
+      <!-- Product information -->
+      <div class="tymly-product__details">
+
+        <span class="tymly-product__detail-label">
+          THE FIRST STEP
+        </span>
+
+        <h3 class="tymly-product__detail-title">
+          Simple timing. Better awareness.
+        </h3>
+
+        <p class="tymly-product__detail-description">
+          When a session has an allocated duration, everyone
+          involved benefits from having a clear view of time.
+          Tymly's starting point is a dedicated timer for that job.
+        </p>
+
+        <div class="tymly-product__features">
+
+          <div class="tymly-product__feature">
+            <span class="tymly-product__feature-icon">◷</span>
+
+            <div>
+              <h4>Keep time in view</h4>
+              <p>
+                Give the person managing the timer a clear
+                countdown during a session.
+              </p>
+            </div>
+          </div>
+
+          <div class="tymly-product__feature">
+            <span class="tymly-product__feature-icon">◴</span>
+
+            <div>
+              <h4>Work with session durations</h4>
+              <p>
+                Present a starting point for common speaking
+                and presentation time slots.
+              </p>
+            </div>
+          </div>
+
+          <div class="tymly-product__feature">
+            <span class="tymly-product__feature-icon">✓</span>
+
+            <div>
+              <h4>Support smoother events</h4>
+              <p>
+                Help event teams stay mindful of the schedule
+                as a programme unfolds.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="tymly-product__link" href="#vision">
+          Discover where Tymly is headed
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- HOW TYMLY WORKS SECTION -->
+<section class="tymly-how" id="how-it-works">
+  <div class="tymly-how__container">
+
+    <div class="tymly-how__intro">
+      <span class="tymly-how__eyebrow">HOW IT WORKS</span>
+
+      <h2>A simpler way to stay aware of time.</h2>
+
+      <p>
+        Every event runs on a schedule. Tymly's timer is designed
+        to help speakers and event teams keep track of time as
+        each session unfolds.
+      </p>
+    </div>
+
+    <div class="tymly-how__steps">
+
+      <!-- STEP 1 -->
+      <article class="tymly-how__card">
+        <div class="tymly-how__number">01</div>
+
+        <div class="tymly-how__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 7v5l3 2"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h3>Choose the session duration</h3>
+
+        <p>
+          Set the time allocated to the session so you have
+          a clear target to work toward.
+        </p>
+      </article>
+
+      <!-- STEP 2 -->
+      <article class="tymly-how__card">
+        <div class="tymly-how__number">02</div>
+
+        <div class="tymly-how__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="m10 8 6 4-6 4V8Z"
+              fill="currentColor"/>
+          </svg>
+        </div>
+
+        <h3>Start the countdown</h3>
+
+        <p>
+          Begin the timer when the session starts and keep
+          the allocated time in view.
+        </p>
+      </article>
+
+      <!-- STEP 3 -->
+      <article class="tymly-how__card">
+        <div class="tymly-how__number">03</div>
+
+        <div class="tymly-how__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 18V6m0 12h16"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round"/>
+            <path d="m7 14 4-4 3 2 5-6"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h3>Keep the programme on track</h3>
+
+        <p>
+          Use the remaining time as a reference to help
+          manage the session and stay mindful of the schedule.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="tymly-how__note">
+      <p>
+        <strong>Small tool. Important role.</strong>
+        Better time awareness can help everyone involved
+        approach each session with greater clarity.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT TYMLY SECTION -->
+<section class="tymly-about" id="about">
+  <div class="tymly-about__container">
+
+    <div class="tymly-about__visual">
+      <div class="tymly-about__visual-card">
+        <span class="tymly-about__visual-label">
+          THE IDEA BEHIND TYMLY
+        </span>
+
+        <div class="tymly-about__clock" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="60" r="47"
+              stroke="currentColor" stroke-width="3"/>
+            <circle cx="60" cy="60" r="37"
+              stroke="currentColor" stroke-width="1"
+              stroke-dasharray="3 6" opacity="0.45"/>
+            <path d="M60 34v27l19 12"
+              stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="60" cy="61" r="4"
+              fill="currentColor"/>
+            <path d="M48 8h24"
+              stroke="currentColor" stroke-width="4"
+              stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h3>Every moment matters.</h3>
+
+        <p>
+          Practical tools for the people who make events happen.
+        </p>
+
+        <div class="tymly-about__visual-line"></div>
+
+        <span class="tymly-about__tagline">
+          Your Helpful Chronoguide.
+        </span>
+      </div>
+    </div>
+
+    <div class="tymly-about__content">
+      <span class="tymly-about__eyebrow">ABOUT TYMLY</span>
+
+      <h2>
+        Built around a simple idea:
+        <span>time matters.</span>
+      </h2>
+
+      <p>
+        Live events bring people together around a shared purpose.
+        But behind every service, conference, seminar, or presentation
+        are people working to keep everything moving smoothly.
+      </p>
+
+      <p>
+        When time slips away, schedules can become difficult to manage
+        and the people coordinating an event face extra pressure.
+        Tymly is being developed to help address that challenge,
+        starting with a dedicated desktop timer.
+      </p>
+
+      <p>
+        The bigger ambition is to explore practical digital tools
+        that can help event teams manage time and coordinate more
+        effectively as the product evolves.
+      </p>
+
+      <div class="tymly-about__principles">
+        <div class="tymly-about__principle">
+          <span class="tymly-about__check" aria-hidden="true">✓</span>
+          <span>Start with real problems.</span>
+        </div>
+
+        <div class="tymly-about__principle">
+          <span class="tymly-about__check" aria-hidden="true">✓</span>
+          <span>Build useful solutions step by step.</span>
+        </div>
+
+        <div class="tymly-about__principle">
+          <span class="tymly-about__check" aria-hidden="true">✓</span>
+          <span>Keep learning from the people we serve.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TYMLY VISION SECTION -->
+<section class="tymly-vision" id="vision">
+  <div class="tymly-vision__container">
+
+    <div class="tymly-vision__content">
+      <span class="tymly-vision__eyebrow">
+        THE VISION BEHIND TYMLY
+      </span>
+
+      <h2>
+        More than keeping time.
+        <span>Helping events work better.</span>
+      </h2>
+
+      <p class="tymly-vision__description">
+        Every successful event depends on people, timing, and
+        coordination. Tymly is starting with a dedicated desktop
+        timer and working toward a broader vision: practical tools
+        that help event teams manage time and work together more
+        effectively.
+      </p>
+
+      <p class="tymly-vision__note">
+        We're building step by step, starting with a real problem
+        and learning what event teams need next.
+      </p>
+    </div>
+
+    <div class="tymly-vision__cards">
+
+      <!-- VISION PILLAR 1 -->
+      <article class="tymly-vision__card">
+        <div class="tymly-vision__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 7v5l3 2"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h3>Better time management</h3>
+
+        <p>
+          Help speakers and event teams stay aware of the time
+          available for each session.
+        </p>
+
+        <span class="tymly-vision__status">
+          Where we're starting
+        </span>
+      </article>
+
+      <!-- VISION PILLAR 2 -->
+      <article class="tymly-vision__card">
+        <div class="tymly-vision__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="9" cy="8" r="3"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 19v-1.5A4.5 4.5 0 0 1 8 13h2"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round"/>
+            <circle cx="17" cy="9" r="2.5"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="M15 14h1a4 4 0 0 1 4 4v1"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h3>Stronger coordination</h3>
+
+        <p>
+          Work toward making it easier for the people involved
+          in an event to stay aligned.
+        </p>
+
+        <span class="tymly-vision__status">
+          Part of the vision
+        </span>
+      </article>
+
+      <!-- VISION PILLAR 3 -->
+      <article class="tymly-vision__card">
+        <div class="tymly-vision__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="13" rx="2"
+              stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8 21h8m-4-4v4M7 9h4m-4 4h7"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h3>A more connected experience</h3>
+
+        <p>
+          Explore how practical digital tools could support
+          the wider needs of live events over time.
+        </p>
+
+        <span class="tymly-vision__status">
+          Long-term ambition
+        </span>
+      </article>
+
+    </div>
+
+    <div class="tymly-vision__footer">
+      <p>
+        <strong>Our approach:</strong>
+        Build what is useful today. Learn what is needed tomorrow.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DOWNLOAD / EARLY ACCESS SECTION -->
+<section class="tymly-download" id="download">
+  <div class="tymly-download__container">
+
+    <span class="tymly-download__eyebrow">
+      TAKE THE NEXT STEP
+    </span>
+
+    <h2>
+      Make every moment count.
+    </h2>
+
+    <p class="tymly-download__description">
+      Tymly is starting with a dedicated desktop timer for
+      live events. Explore the project, follow its progress,
+      and help shape what comes next.
+    </p>
+
+    <div class="tymly-download__actions">
+      <!-- Replace the # with your actual GitHub release URL -->
+      <a
+        class="tymly-download__button tymly-download__button--primary"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore the project
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <a
+        class="tymly-download__button tymly-download__button--secondary"
+        href="mailto:tymlyhub@gmail.com.com?subject=Tymly%20Early%20Access"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <p class="tymly-download__note">
+      The desktop timer is a separate application.
+      It is not yet integrated into this website.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- TYMLY FOOTER -->
+<footer class="tymly-footer">
+  <div class="tymly-footer__container">
+
+    <div class="tymly-footer__main">
+
+      <!-- BRAND -->
+      <div class="tymly-footer__brand">
+        <a href="#home" class="tymly-footer__logo">
+          <img
+            src="assets/TY-04.png"
+            alt="Tymly"
+            class="tymly-footer__logo-image"
+          />
+        </a>
+
+        <p class="tymly-footer__tagline">
+          Your Helpful Chronoguide.
+        </p>
+
+        <p class="tymly-footer__description">
+          Practical tools for better time management and smoother
+          live events. We're starting with a dedicated desktop timer
+          and building toward a broader vision.
+        </p>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="tymly-footer__column">
+        <h3>Explore</h3>
+
+        <a href="#home">Home</a>
+        <a href="#problem">The Challenge</a>
+        <a href="#product">The Timer</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About Tymly</a>
+        <a href="#vision">Our Vision</a>
+      </div>
+
+      <!-- CONNECT -->
+      <div class="tymly-footer__column">
+        <h3>Connect</h3>
+
+        <a href="#download">Get Tymly</a>
+
+        <!-- Replace with your actual email address -->
+        <a href="mailto:tymlyhub@gmail.com">
+          Email Us
+        </a>
+
+        <!-- Replace these placeholder URLs with your real profiles -->
+        <a
+          href="instagram.com/tymly.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="x.com/tymly_app"
+          target="x.com/tymly_app"
+          rel="noopener noreferrer"
+        >
+          X
+        </a>
+      </div>
+
+      <!-- POLICIES -->
+      <div class="tymly-footer__column">
+        <h3>Legal</h3>
+
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+
+    </div>
+
+    <div class="tymly-footer__bottom">
+      <p>
+        &copy; <span id="tymly-year">2026</span> Tymly.
+        All rights reserved.
+      </p>
+
+      <a href="#home" class="tymly-footer__back-to-top">
+        Back to top ↑
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

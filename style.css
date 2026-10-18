@@ -1,0 +1,2173 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111827;
+    background: #ffffff;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========================================
+   TYMly NAVBAR
+======================================== */
+
+.tymly-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e2e8f0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tymly-navbar,
+.tymly-navbar * {
+  box-sizing: border-box;
+}
+
+.tymly-navbar__container {
+  width: 100%;
+  max-width: 1240px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* LOGO */
+
+.tymly-navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.tymly-navbar__logo-image{
+  display: block;
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  object-position: left center;
+}
+.tymly-navbar__logo-name {
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+/* DESKTOP MENU */
+
+.tymly-navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.tymly-navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.tymly-navbar__link {
+  position: relative;
+  padding: 10px 0;
+  color: #475569;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 550;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+.tymly-navbar__link:hover {
+  color: #2563eb;
+}
+
+/* MAIN NAVIGATION BUTTON */
+
+.tymly-navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 12px 17px;
+  border: 1px solid #2563eb;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.tymly-navbar__cta:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.tymly-navbar a:focus-visible,
+.tymly-navbar__toggle:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
+
+/* MOBILE MENU BUTTON */
+
+.tymly-navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.tymly-navbar__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: #0f172a;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+  .tymly-navbar__container {
+    min-height: 70px;
+    padding: 0 20px;
+  }
+
+  .tymly-navbar__toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .tymly-navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff;
+    box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    z-index: 1001;
+    width: 100%;
+    max-height: calc(100vh-70px);
+    overflow-y: auto;
+  }
+
+  .tymly-navbar__menu.is-open {
+    display: flex;
+  }
+
+  .tymly-navbar__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .tymly-navbar__link {
+    display: block;
+    padding: 12px 8px;
+    border-radius: 7px;
+
+    font-size: 15px;
+  }
+
+  .tymly-navbar__link:hover {
+    background: #eff6ff;
+  }
+
+  .tymly-navbar__cta {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 400px) {
+  .tymly-navbar__container {
+    padding: 0 16px;
+  }
+
+  .tymly-navbar__logo-name {
+    font-size: 20px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .tymly-navbar__link,
+  .tymly-navbar__cta,
+  .tymly-navbar__toggle span {
+    transition: none;
+  }
+
+  .tymly-navbar__cta:hover {
+    transform: none;
+  }
+}
+
+
+/* ========================================
+   TYMLY HERO SECTION
+======================================== */
+
+.tymly-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px 110px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.tymly-hero__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 72px;
+}
+
+/* LEFT SIDE: TEXT */
+
+.tymly-hero__content {
+  max-width: 590px;
+}
+
+.tymly-hero__eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.tymly-hero__title {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -2.8px;
+}
+
+.tymly-hero__title span {
+  display: block;
+  margin-top: 8px;
+  color: #2563eb;
+}
+
+.tymly-hero__description {
+  max-width: 520px;
+  margin: 26px 0 0;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* CALLS TO ACTION */
+
+.tymly-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tymly-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 22px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 650;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.tymly-hero__button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.tymly-hero__button:focus-visible,
+.tymly-hero__secondary-link:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
+
+.tymly-hero__secondary-link {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tymly-hero__secondary-link:hover {
+  color: #2563eb;
+}
+
+/* SUPPORTING STATEMENT */
+
+.tymly-hero__note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 34px;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tymly-hero__status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* RIGHT SIDE: TIMER VISUAL */
+
+.tymly-hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 410px;
+}
+
+.tymly-hero__glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #2563eb;
+  filter: blur(65px);
+  opacity: 0.8;
+}
+
+.tymly-hero__timer-card {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 430px;
+
+  overflow: hidden;
+  border: 1px solid #2563eb;
+  border-radius: 22px;
+
+  background: #ffffff;
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.10),
+    0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* TIMER CARD HEADER */
+
+.tymly-hero__timer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 22px 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.tymly-hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.tymly-hero__brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.tymly-hero__preview-label {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+/* TIMER DISPLAY */
+
+.tymly-hero__timer-body {
+  padding: 36px 28px 30px;
+  text-align: center;
+}
+
+.tymly-hero__timer-caption {
+  margin: 0 0 12px;
+
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tymly-hero__time {
+  color: #0f172a;
+  font-size: clamp(58px, 6vw, 82px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tymly-hero__time span {
+  color: #2563eb;
+}
+
+.tymly-hero__progress-track {
+  height: 7px;
+  overflow: hidden;
+  margin-top: 30px;
+
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.tymly-hero__progress-fill {
+  width: 68%;
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+}
+
+.tymly-hero__timer-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 13px;
+
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* TIMER CARD BOTTOM */
+
+.tymly-hero__timer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 16px 24px;
+  border-top: 1px solid #f1f5f9;
+
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.tymly-hero__timer-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+/* FLOATING CARD */
+
+.tymly-hero__floating-card {
+  position: absolute;
+  right: -16px;
+  bottom: 20px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 18px;
+  border: 1px solid #2563eb;
+  border-radius: 14px;
+
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+}
+
+.tymly-hero__floating-icon {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 25px;
+}
+
+.tymly-hero__floating-card strong {
+  display: block;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.tymly-hero__floating-card p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .tymly-hero {
+    padding: 80px 24px 90px;
+  }
+
+  .tymly-hero__container {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .tymly-hero__content {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tymly-hero__description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .tymly-hero__actions,
+  .tymly-hero__note {
+    justify-content: center;
+  }
+
+  .tymly-hero__visual {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .tymly-hero__floating-card {
+    right: 0;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+  .tymly-hero {
+    padding: 60px 18px 72px;
+  }
+
+  .tymly-hero__container {
+    gap: 30px;
+  }
+
+  .tymly-hero__title {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .tymly-hero__description {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .tymly-hero__actions {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .tymly-hero__button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tymly-hero__visual {
+    min-height: 340px;
+  }
+
+  .tymly-hero__timer-header {
+    padding: 17px 18px;
+  }
+
+  .tymly-hero__timer-body {
+    padding: 30px 18px 24px;
+  }
+
+  .tymly-hero__time {
+    font-size: 62px;
+  }
+
+  .tymly-hero__floating-card {
+    right: -4px;
+    bottom: 0;
+    padding: 12px;
+  }
+
+  .tymly-hero__floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tymly-hero__note {
+    font-size: 12px;
+  }
+}
+
+/* ACCESSIBILITY: RESPECT REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .tymly-hero__button {
+    transition: none;
+  }
+
+  .tymly-hero__button:hover {
+    transform: none;
+  }
+}
+
+
+
+/* ========================================
+   TYMLY — SECTION 2: THE PROBLEM
+   ======================================== */
+
+.tymly-problem {
+  --problem-accent: var(--primary-color, #2563eb);
+  --problem-text: var(--text-color, #111827);
+  --problem-muted: var(--muted-color, #64748b);
+  --problem-border: #e8edf4;
+  --problem-card-bg: #ffffff;
+
+  padding: 100px 24px;
+  background: #f8fafc;
+  color: var(--problem-text);
+}
+
+.tymly-problem *,
+.tymly-problem *::before,
+.tymly-problem *::after {
+  box-sizing: border-box;
+}
+
+.tymly-problem__container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+/* Intro */
+
+.tymly-problem__intro {
+  max-width: 720px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.tymly-problem__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--problem-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+}
+
+.tymly-problem__intro h2 {
+  margin: 0 0 20px;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.tymly-problem__intro h2 span {
+  color: var(--problem-accent);
+}
+
+.tymly-problem__intro > p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--problem-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Cards */
+
+.tymly-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tymly-problem__card {
+  min-width: 0;
+  padding: 30px 26px;
+  background: var(--problem-card-bg);
+  border: 1px solid var(--problem-border);
+  border-radius: 16px;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tymly-problem__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  color: var(--problem-accent);
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.tymly-problem__icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.tymly-problem__card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+
+.tymly-problem__card p {
+  margin: 0;
+  color: var(--problem-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tymly-problem__card:hover {
+    transform: translateY(-4px);
+    border-color: #cbdcfb;
+    box-shadow: 0 12px 30px rgb(15 23 42 / 5%);
+  }
+}
+
+/* Closing statement */
+
+.tymly-problem__closing {
+  max-width: 760px;
+  margin: 42px auto 0;
+  text-align: center;
+}
+
+.tymly-problem__closing p {
+  margin: 0;
+  color: var(--problem-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tymly-problem__closing strong {
+  color: var(--problem-text);
+  font-weight: 650;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+  .tymly-problem {
+    padding: 76px 22px;
+  }
+
+  .tymly-problem__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .tymly-problem__card {
+    padding: 25px 22px;
+  }
+
+  .tymly-problem__card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 540px) {
+  .tymly-problem {
+    padding: 60px 20px;
+  }
+
+  .tymly-problem__intro {
+    margin-bottom: 32px;
+  }
+
+  .tymly-problem__intro h2 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .tymly-problem__intro > p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .tymly-problem__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .tymly-problem__card,
+  .tymly-problem__card:last-child {
+    grid-column: auto;
+    padding: 24px;
+  }
+
+  .tymly-problem__icon {
+    margin-bottom: 18px;
+  }
+
+  .tymly-problem__closing {
+    margin-top: 30px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .tymly-problem__card {
+    transition: none;
+  }
+
+  .tymly-problem__card:hover {
+    transform: none;
+  }
+}
+
+
+/* ========================================
+   TYMly PRODUCT SECTION
+======================================== */
+
+.tymly-product {
+  padding: 100px 24px;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.tymly-product__container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* SECTION INTRODUCTION */
+
+.tymly-product__intro {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.tymly-product__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.tymly-product__title {
+  margin: 0;
+
+  color: #0f172a;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.tymly-product__title span {
+  display: block;
+  color: #2563eb;
+}
+
+.tymly-product__description {
+  max-width: 650px;
+  margin: 22px auto 0;
+
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* TWO-COLUMN SHOWCASE */
+
+.tymly-product__showcase {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 76px;
+}
+
+/* TIMER PREVIEW */
+
+.tymly-product__preview {
+  position: relative;
+  min-width: 0;
+}
+
+.tymly-product__window {
+  overflow: hidden;
+
+  border: 1px solid #334155;
+  border-radius: 18px;
+
+  background: #0f172a;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18);
+}
+
+.tymly-product__window-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 15px 18px;
+  border-bottom: 1px solid #334155;
+
+  background: #111c30;
+}
+
+.tymly-product__window-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tymly-product__window-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.tymly-product__window-label {
+  overflow: hidden;
+
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tymly-product__screen {
+  padding: 32px 28px 24px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(37, 99, 235, 0.13),
+      transparent 50%
+    ),
+    #0f172a;
+}
+
+.tymly-product__screen-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+}
+
+.tymly-product__screen-mark {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.tymly-product__screen-caption {
+  margin: 36px 0 8px;
+
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tymly-product__countdown {
+  color: #ffffff;
+  font-size: clamp(56px, 7vw, 84px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tymly-product__screen-note {
+  margin: 8px 0 28px;
+
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.tymly-product__presets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tymly-product__presets span {
+  padding: 9px 11px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+
+  color: #cbd5e1;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.tymly-product__presets span:first-child {
+  border-color: #3b82f6;
+  background: rgba(37, 99, 235, 0.18);
+  color: #bfdbfe;
+}
+
+.tymly-product__demo-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.tymly-product__demo-button {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.tymly-product__demo-button:first-child {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.tymly-product__disclaimer {
+  margin: 22px 0 0;
+
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.tymly-product__preview-tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: fit-content;
+  max-width: 100%;
+  margin: 18px auto 0;
+  padding: 10px 14px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #475569;
+  font-size: 12px;
+}
+
+.tymly-product__preview-tag span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* PRODUCT DETAILS */
+
+.tymly-product__details {
+  min-width: 0;
+}
+
+.tymly-product__detail-label {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+}
+
+.tymly-product__detail-title {
+  margin: 16px 0 14px;
+
+  color: #0f172a;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.3px;
+}
+
+.tymly-product__detail-description {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* FEATURE LIST */
+
+.tymly-product__features {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tymly-product__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.tymly-product__feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 22px;
+}
+
+.tymly-product__feature h4 {
+  margin: 1px 0 6px;
+
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tymly-product__feature p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* LINK TO THE VISION SECTION */
+
+.tymly-product__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 32px;
+
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tymly-product__link:hover {
+  color: #1d4ed8;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .tymly-product {
+    padding: 80px 24px;
+  }
+
+  .tymly-product__showcase {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .tymly-product__preview {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .tymly-product__details {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .tymly-product__intro {
+    margin-bottom: 48px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+  .tymly-product {
+    padding: 64px 18px;
+  }
+
+  .tymly-product__title {
+    font-size: 35px;
+    letter-spacing: -1.3px;
+  }
+
+  .tymly-product__description {
+    font-size: 14px;
+  }
+
+  .tymly-product__screen {
+    padding: 26px 15px 20px;
+  }
+
+  .tymly-product__countdown {
+    font-size: 62px;
+  }
+
+  .tymly-product__presets {
+    gap: 6px;
+  }
+
+  .tymly-product__presets span {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .tymly-product__detail-title {
+    font-size: 30px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .tymly-product * {
+    scroll-behavior: auto;
+  }
+}
+
+
+
+/* HOW TYMLY WORKS SECTION */
+.tymly-how {
+  padding: 100px 24px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.tymly-how__container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tymly-how__intro {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.tymly-how__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tymly-how__intro h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.tymly-how__intro p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.tymly-how__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tymly-how__card {
+  position: relative;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.tymly-how__card:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.06);
+}
+
+.tymly-how__number {
+  margin-bottom: 24px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.tymly-how__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 24px;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 14px;
+}
+
+.tymly-how__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.tymly-how__card h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.tymly-how__card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.tymly-how__note {
+  max-width: 780px;
+  margin: 40px auto 0;
+  padding: 22px 28px;
+  background: #ffffff;
+  border-left: 4px solid #2563eb;
+  border-radius: 0 12px 12px 0;
+}
+
+.tymly-how__note p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.tymly-how__note strong {
+  color: #0f172a;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .tymly-how__steps {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .tymly-how__card {
+    padding: 28px;
+  }
+
+  .tymly-how__number {
+    margin-bottom: 18px;
+  }
+
+  .tymly-how__icon {
+    margin-bottom: 18px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .tymly-how {
+    padding: 72px 18px;
+  }
+
+  .tymly-how__intro {
+    margin-bottom: 36px;
+  }
+
+  .tymly-how__intro p {
+    font-size: 1rem;
+  }
+
+  .tymly-how__card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .tymly-how__note {
+    margin-top: 28px;
+    padding: 20px;
+  }
+}
+
+
+
+/* TYMLY VISION SECTION */
+.tymly-vision {
+  padding: 100px 24px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.tymly-vision__container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tymly-vision__content {
+  max-width: 780px;
+  margin-bottom: 52px;
+}
+
+.tymly-vision__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tymly-vision__content h2 {
+  margin: 0 0 22px;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.tymly-vision__content h2 span {
+  display: block;
+  color: #2563eb;
+}
+
+.tymly-vision__description {
+  max-width: 720px;
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.tymly-vision__note {
+  margin: 0;
+  color: #475569;
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.tymly-vision__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tymly-vision__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #f8fafc;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tymly-vision__card:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+}
+
+.tymly-vision__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.tymly-vision__icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.tymly-vision__card h3 {
+  margin: 0 0 12px;
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.tymly-vision__card p {
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.tymly-vision__status {
+  display: inline-block;
+  margin-top: auto;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.tymly-vision__footer {
+  margin-top: 36px;
+  padding: 24px 28px;
+  border-left: 4px solid #2563eb;
+  border-radius: 0 12px 12px 0;
+  background: #f8fafc;
+}
+
+.tymly-vision__footer p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.tymly-vision__footer strong {
+  color: #0f172a;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .tymly-vision__cards {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .tymly-vision__content {
+    margin-bottom: 38px;
+  }
+
+  .tymly-vision__card {
+    padding: 26px;
+  }
+
+  .tymly-vision__icon {
+    margin-bottom: 18px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .tymly-vision {
+    padding: 72px 18px;
+  }
+
+  .tymly-vision__content h2 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .tymly-vision__description {
+    font-size: 1rem;
+  }
+
+  .tymly-vision__card {
+    border-radius: 15px;
+  }
+
+  .tymly-vision__footer {
+    margin-top: 26px;
+    padding: 20px;
+  }
+}
+
+
+/* ABOUT TYMLY SECTION */
+.tymly-about {
+  padding: 100px 24px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.tymly-about__container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 72px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tymly-about__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.tymly-about__visual-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 42px 32px;
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.08);
+}
+
+.tymly-about__visual-label {
+  color: #2563eb;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tymly-about__clock {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 24px;
+  color: #2563eb;
+}
+
+.tymly-about__clock svg {
+  width: 120px;
+  height: 120px;
+}
+
+.tymly-about__visual-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.65rem;
+  letter-spacing: -0.03em;
+}
+
+.tymly-about__visual-card p {
+  max-width: 290px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.tymly-about__visual-line {
+  width: 56px;
+  height: 4px;
+  margin: 28px auto;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+.tymly-about__tagline {
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tymly-about__content {
+  max-width: 600px;
+}
+
+.tymly-about__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tymly-about__content h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.tymly-about__content h2 span {
+  color: #2563eb;
+}
+
+.tymly-about__content > p {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.tymly-about__principles {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.tymly-about__principle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.tymly-about__check {
+  display: flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .tymly-about__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 680px;
+  }
+
+  .tymly-about__visual-card {
+    max-width: 480px;
+  }
+
+  .tymly-about__content {
+    max-width: 100%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .tymly-about {
+    padding: 72px 18px;
+  }
+
+  .tymly-about__container {
+    gap: 36px;
+  }
+
+  .tymly-about__visual-card {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+
+  .tymly-about__content h2 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .tymly-about__clock svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* DOWNLOAD / EARLY ACCESS SECTION */
+.tymly-download {
+  padding: 100px 24px;
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tymly-download__container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.tymly-download__eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #93c5fd;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.tymly-download h2 {
+  margin: 0 0 22px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.tymly-download__description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.tymly-download__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.tymly-download__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 14px 24px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tymly-download__button:hover {
+  transform: translateY(-2px);
+}
+
+.tymly-download__button--primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.tymly-download__button--primary:hover {
+  background: #1d4ed8;
+}
+
+.tymly-download__button--secondary {
+  border-color: #475569;
+  background: transparent;
+  color: #ffffff;
+}
+
+.tymly-download__button--secondary:hover {
+  border-color: #94a3b8;
+  background: #1e293b;
+}
+
+.tymly-download__note {
+  margin: 30px 0 0;
+  color: #94a3b8;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .tymly-download {
+    padding: 76px 18px;
+  }
+
+  .tymly-download h2 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+
+  .tymly-download__description {
+    font-size: 1rem;
+  }
+
+  .tymly-download__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tymly-download__button {
+    width: 100%;
+  }
+}
+
+
+/* TYMLY FOOTER */
+.tymly-footer {
+  padding: 72px 24px 24px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.tymly-footer__container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tymly-footer__main {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 0.8fr;
+  gap: 48px;
+  padding-bottom: 56px;
+}
+
+.tymly-footer__brand {
+  max-width: 320px;
+}
+
+.tymly-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tymly-footer__logo-image {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.tymly-footer__tagline {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tymly-footer__description {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.tymly-footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.tymly-footer__column h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.tymly-footer__column a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tymly-footer__column a:hover,
+.tymly-footer__back-to-top:hover {
+  color: #93c5fd;
+}
+
+.tymly-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid #334155;
+}
+
+.tymly-footer__bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.tymly-footer__back-to-top {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .tymly-footer__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+  .tymly-footer__brand {
+    max-width: 360px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 560px) {
+  .tymly-footer {
+    padding: 56px 20px 22px;
+  }
+
+  .tymly-footer__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 22px;
+    padding-bottom: 40px;
+  }
+
+  .tymly-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .tymly-footer__logo-image {
+    width: 135px;
+  }
+
+  .tymly-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
