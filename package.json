@@ -1,0 +1,23 @@
+{
+  "name": "tymly-website",
+  "version": "1.0.0",
+  "description": "Tymly - Time management for live events",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Destiny-0101/Tymly-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Destiny-0101/Tymly-Website/issues"
+  },
+  "homepage": "https://github.com/Destiny-0101/Tymly-Website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
