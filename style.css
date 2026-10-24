@@ -2266,15 +2266,6 @@ img {
   height: 25px;
 }
 
-.tymly-research__tag {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: #2563eb;
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 1px;
-}
-
 .tymly-research__tag--upcoming {
   color: #64748b;
 }
